@@ -1,0 +1,86 @@
+1: int a,b;
+	Int int
+	Ident a
+	Comma ,
+	Ident b
+	LineEnd ;
+2: double c;
+	Double double
+	Ident c
+	LineEnd ;
+3: int d[2];
+	Int int
+	Ident d
+	LMidBracket [
+	IntConstant 2
+	RMidBracket ]
+	LineEnd ;
+4: a = 100;
+	Ident a
+	Assign =
+	IntConstant 100
+	LineEnd ;
+5: b = 200;
+	Ident b
+	Assign =
+	IntConstant 200
+	LineEnd ;
+6: if(a<b){
+	If if
+	LBracket (
+	Ident a
+	CompOp <
+	Ident b
+	RBracket )
+	LBigBracket {
+7:     c=3.45;
+	Ident c
+	Assign =
+	DoubleConstant 3.45
+	LineEnd ;
+8:     d[0]=0;
+	Ident d
+	LMidBracket [
+	IntConstant 0
+	RMidBracket ]
+	Assign =
+	IntConstant 0
+	LineEnd ;
+9: }else if(a>b){
+	RBigBracket }
+	Else else
+	If if
+	LBracket (
+	Ident a
+	CompOp >
+	Ident b
+	RBracket )
+	LBigBracket {
+10:     d[1]=1;
+	Ident d
+	LMidBracket [
+	IntConstant 1
+	RMidBracket ]
+	Assign =
+	IntConstant 1
+	LineEnd ;
+11: }else if(a==b){
+	RBigBracket }
+	Else else
+	If if
+	LBracket (
+	Ident a
+	CompOp ==
+	Ident b
+	RBracket )
+	LBigBracket {
+12:     c=3.23.1;
+	Ident c
+	Assign =
+	DoubleConstant 3.23
+	IntConstant 1
+	LineEnd ;
+13: }
+14: EOF
+line 12:10 token recognition error at: '.'
+
